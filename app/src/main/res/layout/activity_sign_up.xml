@@ -11,12 +11,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:startIconDrawable="@drawable/ic_baseline_person_remove_24"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_person_remove_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFirstname"
@@ -32,12 +32,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:startIconDrawable="@drawable/ic_baseline_person_remove_24"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilFirstname">
+        app:layout_constraintTop_toBottomOf="@+id/tilFirstname"
+        app:startIconDrawable="@drawable/ic_baseline_person_remove_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastname"
@@ -67,13 +67,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:startIconDrawable="@drawable/ic_baseline_email_24"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilLastname">
+        app:layout_constraintTop_toBottomOf="@+id/tilLastname"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -88,13 +88,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:startIconDrawable="@drawable/ic_baseline_person_remove_24"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_person_remove_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
@@ -109,13 +109,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        app:startIconDrawable="@drawable/ic_baseline_lock_24"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilPasswpord"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirmPassword"
@@ -126,14 +126,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tvtextview"
-        android:layout_width="347dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="16dp"
-        android:text="By signing up you have  aggred with our terms of use and privacy policy"
-        android:textSize="14sp"
+        android:id="@+id/tvlogin"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Login"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/plan"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="Plan"/>
+    <item
+        android:id="@+id/track"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_track_changes_24"
+        android:title="Track"/>
+
+   <item
+       android:id="@+id/profile"
+       android:enabled="true"
+       android:icon="@drawable/ic_baseline_person_add_alt_1_24"
+       android:title="Profile"/>
+
+</menu>

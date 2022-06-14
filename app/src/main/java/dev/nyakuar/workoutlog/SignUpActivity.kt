@@ -16,8 +16,7 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var etPassword: TextInputEditText
     lateinit var etConfirmPassword: TextInputEditText
     lateinit var btnSignup: Button
-    lateinit var btntxview: TextView
-
+    lateinit var tvlogin: TextView
     lateinit var tilFirstname: TextInputLayout
     lateinit var tilLastname: TextInputLayout
     lateinit var tilPassword: TextInputLayout
@@ -25,65 +24,68 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var tilConfirmPassword: TextInputLayout
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-//
-//        etFirstname  = findViewById(R.id.etFirstname )
-//        etLastname   = findViewById(R.id.etLastname  )
-//        etEmail   = findViewById(R.id.etEmail  )
-//        etPassword   = findViewById(R.id.etPassword  )
-//        etConfirmPassword   = findViewById(R.id.etConfirmPassword )
-//        btnSignup  = findViewById(R.id.tvSignup)
-//        btntxview = findViewById(R.id.btnLogin)
-//        tilEmail   = findViewById(R.id.tilEmail )
-//        tilFirstname   = findViewById(R.id.tilFirstname  )
-//        tilFirstname   = findViewById(R.id.tilLastname )
-//        tilPassword  = findViewById(R.id.tilPasswpord )
-//        tilConfirmPassword   = findViewById(R.id.tilConfirmpassword )
-
-//        btnSignup .setOnClickListener{
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
+        etFirstname = findViewById(R.id.etFirstname)
+        etLastname = findViewById(R.id.etLastname)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        etConfirmPassword = findViewById(R.id.etConfirmPassword)
+        btnSignup = findViewById(R.id.btnSignup)
+        tvlogin = findViewById(R.id.tvlogin)
+        tilEmail = findViewById(R.id.tilEmail)
+        tilFirstname = findViewById(R.id.tilFirstname)
+        tilLastname = findViewById(R.id.tilLastname)
+        tilPassword = findViewById(R.id.tilPasswpord)
+        tilConfirmPassword = findViewById(R.id.tilConfirmpassword)
 
 
 
-//        tvSignup  .setOnClickListener{
-//                val intent = Intent(this, LoginActivity::class.java)
-//                startActivity(intent)
-//
-//                validateSign()
+
+        tvlogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+
+        }
+        btnSignup .setOnClickListener {
+            validateLogin()
+
         }
 
+    }
 
-//        fun   validateSign(){
-//
-//            var firstname=etFirstname.text.toString()
-//            var Lastname=etFirstname.text.toString()
-//            var Email =etFirstname.text.toString()
-//            var Password=etFirstname.text.toString()
-//            var ConfirmPassword=etFirstname.text.toString()
-//            if (firstname.isBlank() ){
-//                tilPassword.error="Enter last name"
-//            }
-//            if (Lastname.isBlank() ){
-//                tilFirstname .error="Enter last name"
-//           }
-//
-//            if (Email .isBlank() ){
-//                tilEmail .error="Enter last name"
-//           }
-//            if (Password .isBlank() ){
-//                tilPassword.error="Enter last name"
-//           }
-//            if (ConfirmPassword  .isBlank() ){
-//                tilConfirmPassword.error="Enter last name"
-//
-//
-//            }
-//
-//        }
+    fun validateLogin() {
+            var firstname=etFirstname.text.toString()
+            var lastname=etLastname.text.toString()
+            var email =etEmail .text.toString()
+            var password=etPassword .text.toString()
+            var confirmPassword=etConfirmPassword .text.toString()
 
-       }
 
+
+        if (firstname.isBlank() ){
+                etFirstname .error="Enter first name"
+            }
+            if (lastname.isBlank() ){
+                etLastname .error="Enter last name"
+           }
+
+            if (email .isBlank() ){
+                etEmail.error="Enter email"
+           }
+            if (password .isBlank() ){
+                etPassword.error="Enter password"
+           }
+            if (confirmPassword  .isBlank() ){
+                etConfirmPassword.error="Confirm password"
+
+
+            }
+            if (password==confirmPassword ){
+                tilConfirmPassword.error ="your password is invalid"
+
+    }
+    }
+
+ }

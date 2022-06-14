@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item>
     <bitmap android:gravity="fill"
-        android:src="@drawable/sports" />
+        android:src="@drawable/plashfirst" />
 </item>
 </selector>
