@@ -21,20 +21,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 //        setContentView(R.layout.activity_sign_up)
 
-//        etFirstname = findViewById(R.id.etFirstname)
-//        etLastname = findViewById(R.id.etLastname)
-//        etEmail = findViewById(R.id.etEmail)
-//        etPassword = findViewById(R.id.etPassword)
-//        etConfirmPassword = findViewById(R.id.etConfirmPassword)
-//        btnSignup = findViewById(R.id.btnSignup)
-//        tvlogin = findViewById(R.id.tvlogin)
-//        tilEmail = findViewById(R.id.tilEmail)
-//        tilFirstname = findViewById(R.id.tilFirstname)
-//        tilLastname = findViewById(R.id.tilLastname)
-//        tilPassword = findViewById(R.id.tilPasswpord)
-//        tilConfirmPassword = findViewById(R.id.tilConfirmpassword)
-
-
+//
 
 
         binding.tvlogin.setOnClickListener {

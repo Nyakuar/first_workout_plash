@@ -14,11 +14,9 @@ import dev.nyakuar.workoutlog.databinding.ActivityMainBinding
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.tvSignup.setOnClickListener{
             val intent = Intent(this, SignUpActivity::class.java)

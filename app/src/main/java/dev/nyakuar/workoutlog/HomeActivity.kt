@@ -11,20 +11,20 @@ import dev.nyakuar.workoutlog.databinding.ActivityHomeBinding
 import dev.nyakuar.workoutlog.databinding.ActivityMainBinding
 
 class HomeActivity : AppCompatActivity() {
-    lateinit var bnvHome :BottomNavigationView
-    lateinit var fcvHome :FragmentContainerView
+    lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding= ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         castView()
         setupBottomNav()
 
     }
     fun castView (){
-        bnvHome = findViewById(R.id.bottomNavigationView )
-        fcvHome = findViewById(R.id.fcvHome)
+
 }
     fun setupBottomNav(){
-       bnvHome.setOnItemSelectedListener{ item->
+       binding.bottomNavigationView.setOnItemSelectedListener{ item->
            when (item .itemId ){
                R.id.plan ->{
                    supportFragmentManager.beginTransaction().replace(R.id .fcvHome, PlanFragment()).commit()
