@@ -8,47 +8,41 @@ import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import dev.nyakuar.workoutlog.databinding.ActivityLoginBinding
+import dev.nyakuar.workoutlog.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
-    lateinit var etFirstname: TextInputEditText
-    lateinit var etLastname: TextInputEditText
-    lateinit var etEmail: TextInputEditText
-    lateinit var etPassword: TextInputEditText
-    lateinit var etConfirmPassword: TextInputEditText
-    lateinit var btnSignup: Button
-    lateinit var tvlogin: TextView
-    lateinit var tilFirstname: TextInputLayout
-    lateinit var tilLastname: TextInputLayout
-    lateinit var tilPassword: TextInputLayout
-    lateinit var tilEmail: TextInputLayout
-    lateinit var tilConfirmPassword: TextInputLayout
+   lateinit var binding: ActivitySignUpBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
-        etFirstname = findViewById(R.id.etFirstname)
-        etLastname = findViewById(R.id.etLastname)
-        etEmail = findViewById(R.id.etEmail)
-        etPassword = findViewById(R.id.etPassword)
-        etConfirmPassword = findViewById(R.id.etConfirmPassword)
-        btnSignup = findViewById(R.id.btnSignup)
-        tvlogin = findViewById(R.id.tvlogin)
-        tilEmail = findViewById(R.id.tilEmail)
-        tilFirstname = findViewById(R.id.tilFirstname)
-        tilLastname = findViewById(R.id.tilLastname)
-        tilPassword = findViewById(R.id.tilPasswpord)
-        tilConfirmPassword = findViewById(R.id.tilConfirmpassword)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_sign_up)
+
+//        etFirstname = findViewById(R.id.etFirstname)
+//        etLastname = findViewById(R.id.etLastname)
+//        etEmail = findViewById(R.id.etEmail)
+//        etPassword = findViewById(R.id.etPassword)
+//        etConfirmPassword = findViewById(R.id.etConfirmPassword)
+//        btnSignup = findViewById(R.id.btnSignup)
+//        tvlogin = findViewById(R.id.tvlogin)
+//        tilEmail = findViewById(R.id.tilEmail)
+//        tilFirstname = findViewById(R.id.tilFirstname)
+//        tilLastname = findViewById(R.id.tilLastname)
+//        tilPassword = findViewById(R.id.tilPasswpord)
+//        tilConfirmPassword = findViewById(R.id.tilConfirmpassword)
 
 
 
 
-        tvlogin.setOnClickListener {
+        binding.tvlogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
 
         }
-        btnSignup .setOnClickListener {
+        binding.btnSignup .setOnClickListener {
             validateLogin()
 
         }
@@ -56,34 +50,31 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun validateLogin() {
-            var firstname=etFirstname.text.toString()
-            var lastname=etLastname.text.toString()
-            var email =etEmail .text.toString()
-            var password=etPassword .text.toString()
-            var confirmPassword=etConfirmPassword .text.toString()
+            var firstname=binding.etFirstname.text.toString()
+            var lastname=binding.etLastname.text.toString()
+            var email =binding.etEmail .text.toString()
+            var password=binding.etPassword .text.toString()
+            var confirmPassword=binding.etConfirmPassword .text.toString()
 
 
 
         if (firstname.isBlank() ){
-                etFirstname .error="Enter first name"
+                binding.etFirstname .error="Enter first name"
             }
             if (lastname.isBlank() ){
-                etLastname .error="Enter last name"
+                binding.etLastname .error="Enter last name"
            }
 
             if (email .isBlank() ){
-                etEmail.error="Enter email"
+                binding.etEmail.error="Enter email"
            }
             if (password .isBlank() ){
-                etPassword.error="Enter password"
+                binding.etPassword.error="Enter password"
            }
             if (confirmPassword  .isBlank() ){
-                etConfirmPassword.error="Confirm password"
+                binding.etConfirmPassword.error="Confirm password"
 
 
-            }
-            if (password==confirmPassword ){
-                tilConfirmPassword.error ="your password is invalid"
 
     }
     }
